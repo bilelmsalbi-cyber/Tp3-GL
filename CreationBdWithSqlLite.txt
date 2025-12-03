@@ -1,0 +1,51 @@
+"C:\Users\acer i3\Downloads\sqlite-tools-win-x64-3510000\sqlite3.exe" "C:\Users\acer i3\Desktop\jiraP\users.db"
+
+
+CREATE TABLE users (
+    id_user INTEGER PRIMARY KEY,
+    titre TEXT,
+    prenom TEXT,
+    nom TEXT,
+    role TEXT,
+    email TEXT UNIQUE,
+    password TEXT,
+    newsletter INTEGER DEFAULT 0
+);
+
+
+
+.quit
+
+
+
+
+"C:\Users\acer i3\Downloads\sqlite-tools-win-x64-3510000\sqlite3.exe" "C:\Users\acer i3\Desktop\jiraP\bank.db"
+
+
+
+
+
+
+
+CREATE TABLE accounts (
+    id_user INTEGER PRIMARY KEY,
+    balance REAL DEFAULT 0
+);
+
+CREATE TABLE transactions (
+    id_trans INTEGER PRIMARY KEY,
+    id_user INTEGER,
+    date_trans TEXT DEFAULT (datetime('now')),
+    description TEXT,
+    montant REAL
+);
+
+CREATE TABLE atm (
+    id_atm INTEGER PRIMARY KEY,
+    id_user INTEGER,
+    atm_id TEXT,
+    date_login TEXT DEFAULT (datetime('now'))
+);
+
+
+.quit

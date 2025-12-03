@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="card">
+        <h1>Inscription</h1>
+
+       <form id="regForm" method="POST" action="register.php" onsubmit="return verif2()">
+
+            Titre
+            <select id="titre" name="titre">
+                <option value="">---</option>
+                <option value="M">M</option>
+                <option value="Mme">Mme</option>
+            </select>
+
+            Prénom
+            <input type="text"id="prenom" name="prenom">
+
+            Nom
+            <input type="text" id="nom" name="nom">
+
+            Vous etes
+            <select id="role" name="role">
+                <option value="particulier">particulier</option>
+                <option value="professionnel">professionnel</option>
+                <option value="employe">employe</option>
+            </select>
+
+            email
+            <input type="email" id="email" name="email">
+
+            Mot de passe
+            <input type="password" id="password" name="password">
+
+
+            <button type="submit">Enregistrer</button>
+            <button type="reset">Annuler</button>
+
+
+
+        </form>
+    </main>
+
+    <script src="register.js"></script>
+ 
+</body>
+</html>

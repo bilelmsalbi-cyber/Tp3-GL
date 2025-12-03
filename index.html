@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+
+</head>
+
+<body>
+
+    <main class="card">
+        <h1>Connexion</h1>
+
+        <form id="loginForm" method="POST" action="login.php" onsubmit="return verif()">
+
+            <label>Email</label>
+            <input type="email" id="email" name="email">
+            <label>Mot de passe</label>
+            <input type="password" id="password" name="password">
+
+            <button type="submit" onclick="verif()">Se connecter</button>
+
+            <p class="small">
+                Pas de compte ?
+                <a href="register.html">Creer un compte</a>
+            </p>
+
+        </form>
+    </main>
+
+</body>
+</html>
